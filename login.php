@@ -2,7 +2,7 @@
     if ($_SERVER['REQUEST_METHOD'] == "POST"){  
         $email = trim($_POST['email']);     
         $password = trim($_POST['password']);    
-        $user = new LoginUser($emai, $password);
+        $user = new LoginUser($email, $password);
     }
 ?>
 
