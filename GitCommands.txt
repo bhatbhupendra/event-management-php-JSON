@@ -10,4 +10,4 @@ git checkout branchName                 //to switch the branch
 git pull origin main                    //to pull the main branch
 git add .                               //add all files to local git file
 git commit -m "update: readme file"     //commit to change made with msg
-git push -u origin branchName           //push to github
+git push -u origin branchName           //push to  github
