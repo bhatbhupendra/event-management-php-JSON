@@ -25,6 +25,9 @@ class RegisterUser{
          "contact" => $this->contact,
          "password" => $this->encrypted_password,
       ];
+      if($this->checkFieldValues()){
+         $this->insertUser();
+      }
    }
    private function checkFieldValues(){
       if(empty($this->email) || empty($this->raw_password)){

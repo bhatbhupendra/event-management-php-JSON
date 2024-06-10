@@ -1,13 +1,11 @@
-<?php require("register.class.php") ?>
+<?php require("classes/register.class.php") ?>
 <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST"){ 
         $name = trim($_POST["fullName"]); 
         $email = trim($_POST["email"]);
         $contact = trim($_POST["contact"]);
         $password = trim($_POST['password']); 
-        if(new RegisterUser($name, $email,$contact,$password)){
-          header("location: login.php");
-        }
+        $user = new RegisterUser($name, $email,$contact,$password);
       }
 ?>
 
