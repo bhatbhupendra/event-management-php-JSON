@@ -1,3 +1,4 @@
+<?php require("classes/login.class.php") ?>
 <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST"){  
         $email = trim($_POST['email']);     
@@ -35,6 +36,8 @@
           </div>
         </form>
         <div class="link">Don't have account. Create one!! <a href=register.php>SignUp</a></div>
+        <p class="error"><?php echo @$user->error ?></p>
+        <p class="success"><?php echo @$user->success ?></p>
       </section>
     </div>
     <script src="assets/js/script.js"></script>
