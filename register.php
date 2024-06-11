@@ -1,6 +1,6 @@
 <?php require("classes/register.class.php") ?>
 <?php
-    if ($_SERVER['REQUEST_METHOD'] == "POST"){ 
+    if($_SERVER['REQUEST_METHOD'] == "POST"){ 
         $name = trim($_POST["fullName"]); 
         $email = trim($_POST["email"]);
         $contact = trim($_POST["contact"]);
