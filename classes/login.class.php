@@ -7,6 +7,7 @@ class LoginUser{
    public $success;
    private $storage = "userData.json";
    private $stored_users;
+   public $userData;
  
    // class methods -----------------------------------------
    public function __construct($email, $password){

@@ -1,9 +1,17 @@
 <?php require("classes/login.class.php") ?>
 <?php
+    session_start();
     if ($_SERVER['REQUEST_METHOD'] == "POST"){  
         $email = trim($_POST['email']);     
         $password = trim($_POST['password']);    
         $user = new LoginUser($email, $password);
+        print_r($user->stored_users);
+        if($user){
+          $_SESSION['name'] = $user['name'];
+          $_SESSION['email'] = $user['email'];
+          $_SESSION['contact'] = $user['contact'];
+          // header("location: home.php");
+        }
     }
 ?>
 
